@@ -2,8 +2,9 @@
 name: Feature
 about: Default Template for Features
 title: "[Feature]: "
-labels: Feature
+labels: enhancement
+assignees: jmcauley04
 
 ---
 
-Description: 
+Description:
