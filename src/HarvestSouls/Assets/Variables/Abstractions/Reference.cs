@@ -1,11 +1,9 @@
-using System;
-
-[Serializable]
-public abstract class Reference<T>
+public abstract class Reference<T, TVariable>
+    where TVariable : ReferenceVariable<T>
 {
     public bool UseConstant = true;
     public T ConstantValue;
-    public ReferenceVariable<T> Variable;
+    public TVariable Variable;
 
     public T Value => UseConstant ? ConstantValue : Variable.Value;
 }

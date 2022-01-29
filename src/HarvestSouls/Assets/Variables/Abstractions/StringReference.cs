@@ -1,3 +1,6 @@
-﻿public class StringReference : Reference<string>
+﻿using System;
+
+[Serializable]
+public class StringReference : Reference<string, StringVariable>
 {
 }
