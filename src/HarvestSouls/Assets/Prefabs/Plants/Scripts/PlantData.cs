@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Data/PlantData")]
 public class PlantData : ScriptableObject
 {
     public Sprite Stage0Sprite;

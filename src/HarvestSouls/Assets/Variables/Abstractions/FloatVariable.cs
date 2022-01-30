@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Variable/Float")]
 public class FloatVariable : ReferenceVariable<float>
 {
 }
