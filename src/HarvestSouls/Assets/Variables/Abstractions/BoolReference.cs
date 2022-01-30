@@ -1,3 +1,6 @@
-﻿public class BoolReference : Reference<bool>
+﻿using System;
+
+[Serializable]
+public class BoolReference : Reference<bool, BoolVariable>
 {
 }

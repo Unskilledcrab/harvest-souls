@@ -1,3 +1,6 @@
-﻿public class IntReference : Reference<int>
+﻿using System;
+
+[Serializable]
+public class IntReference : Reference<int, IntVariable>
 {
 }
