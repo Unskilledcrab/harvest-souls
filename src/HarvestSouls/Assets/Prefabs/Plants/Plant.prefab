@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1049423424392643884}
   - component: {fileID: 5736051821184287198}
-  - component: {fileID: -6540330564507838020}
   - component: {fileID: 3371980487235097213}
   - component: {fileID: 7168316104016777372}
   m_Layer: 0
@@ -85,34 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-6540330564507838020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2238781055667419955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b73d6db63e96e784687881f1237b697e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Stage1GrowTime:
-    UseConstant: 1
-    ConstantValue: 2
-    Variable: {fileID: 0}
-  Stage2GrowTime:
-    UseConstant: 1
-    ConstantValue: 4
-    Variable: {fileID: 0}
-  Stage3GrowTime:
-    UseConstant: 1
-    ConstantValue: 6
-    Variable: {fileID: 0}
-  WiltTime:
-    UseConstant: 1
-    ConstantValue: 10
-    Variable: {fileID: 0}
 --- !u!114 &3371980487235097213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,8 +100,8 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -6540330564507838020}
-        m_TargetAssemblyTypeName: Growth, Assembly-CSharp
+      - m_Target: {fileID: 7168316104016777372}
+        m_TargetAssemblyTypeName: PlantMono, Assembly-CSharp
         m_MethodName: IncreaseAge
         m_Mode: 1
         m_Arguments:

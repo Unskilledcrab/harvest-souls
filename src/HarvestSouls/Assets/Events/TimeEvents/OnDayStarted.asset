@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f6ca55829948614baf5be26b16bdd68, type: 3}
-  m_Name: Mandrake
+  m_Script: {fileID: 11500000, guid: c194add721343e8419570e92a149db00, type: 3}
+  m_Name: OnDayStarted
   m_EditorClassIdentifier: 
-  Stage1: {fileID: 0}
-  Stage2: {fileID: 0}
-  Stage3: {fileID: 0}

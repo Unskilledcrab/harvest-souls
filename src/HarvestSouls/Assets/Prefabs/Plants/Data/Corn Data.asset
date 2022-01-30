@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6ca55829948614baf5be26b16bdd68, type: 3}
+  m_Name: Corn Data
+  m_EditorClassIdentifier: 
+  Stage0Sprite: {fileID: 0}
+  Stage1Sprite: {fileID: -7944502702452990849, guid: 969789367ed10af419a01e62c42f1a74, type: 3}
+  Stage2Sprite: {fileID: 554072705901678547, guid: 969789367ed10af419a01e62c42f1a74, type: 3}
+  Stage3Sprite: {fileID: 5064783790253195744, guid: 969789367ed10af419a01e62c42f1a74, type: 3}
+  WiltedSprite: {fileID: 0}
+  Stage1Age: 2
+  Stage2Age: 4
+  Stage3Age: 6
+  WiltAge: 10
