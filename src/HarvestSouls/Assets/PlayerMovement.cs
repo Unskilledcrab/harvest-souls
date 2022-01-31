@@ -1,36 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Input;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float moveSpeed = 5f;
 
-    public InputMaster controls;
+    public Rigidbody2D rb;
+    public Animator animator;
+
+    private Vector2 movement;
+    private InputMaster controls;
 
     void Awake()
     {
-        controls.Player.Sprint.performed += x => Sprint();
-        controls.Player.Movement.performed += ctx => Move(ctx.ReadValue<Vector2>());
+        controls = new InputMaster();
+        controls.Player.Enable();
+        //controls.Player.Sprint.performed += x => Sprint();
     }
 
-    void Move(Vector2 direction)
+    void Update()
     {
-        
+        movement = controls.Player.Movement.ReadValue<Vector2>();
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
-    void Sprint()
+    void FixedUpdate()
     {
-        
-    }
-
-    private void OnEnable()
-    {
-        controls.Enable();
-    }
-
-    private void OnDisable()
-    {
-        controls.Disable();
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
