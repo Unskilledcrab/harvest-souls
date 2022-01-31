@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sprite: {fileID: 21300000, guid: 041989fbcaa020741b68f21fb6d1a172, type: 3}
   CapacityKg: 180
+  DragAnchor:
+    serializedVersion: 2
+    x: -2
+    y: 1
+    width: 4
+    height: 4
