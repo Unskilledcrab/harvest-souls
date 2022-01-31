@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D RigidBody;
     public Animator Animator;
+    public Transform SortPoint;
 
     private Vector2 movement;
     private PlayerAnimator playerAnimator;
@@ -15,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
+        var sprite = GetComponent<SpriteRenderer>();
+        
         playerAnimator = new PlayerAnimator(Animator);
         input = new InputMaster();
         input.Player.Enable();   

@@ -81,5 +81,5 @@ SpriteAtlas:
   - Tileset-Dirt_2
   - Tileset-Dirt_3
   m_RenderDataMap: {}
-  m_Tag: New Sprite Atlas
+  m_Tag: TilesetAtlas
   m_IsVariant: 0
