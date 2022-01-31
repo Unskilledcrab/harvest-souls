@@ -9,13 +9,19 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
-    Vector2 movement;
+    private Vector2 movement;
+    private InputMaster controls;
 
-    // Update is called once per frame
+    void Awake()
+    {
+        controls = new InputMaster();
+        controls.Player.Enable();
+        //controls.Player.Sprint.performed += x => Sprint();
+    }
+
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        movement = controls.Player.Movement.ReadValue<Vector2>();
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
