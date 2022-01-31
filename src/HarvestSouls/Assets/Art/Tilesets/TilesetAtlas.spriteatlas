@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TilesetAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 5598669705918312883, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: 2208651051920104268, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: 3169444046320793149, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: 6650895507574399008, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: -28430972728488693, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: 3096793659700226340, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: -3263306161966393796, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: 2594302379592252547, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: -1221517911780334382, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: 6549508738624405269, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: 7726057372340776808, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: 8735230336674396771, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: -8502577823460934472, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: 8420028466447293167, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  - {fileID: 665957212889862046, guid: 3ab430abc0e5c5c4ba7b2c059e26e542, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Tileset-Dirt_14
+  - Tileset-Dirt_13
+  - Tileset-Dirt_12
+  - Tileset-Dirt_11
+  - Tileset-Dirt_10
+  - Tileset-Dirt_8
+  - Tileset-Dirt_9
+  - Tileset-Dirt_4
+  - Tileset-Dirt_5
+  - Tileset-Dirt_6
+  - Tileset-Dirt_7
+  - Tileset-Dirt_0
+  - Tileset-Dirt_1
+  - Tileset-Dirt_2
+  - Tileset-Dirt_3
+  m_RenderDataMap: {}
+  m_Tag: New Sprite Atlas
+  m_IsVariant: 0

@@ -19,7 +19,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Environment
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1903050417
+    locked: 0
+  - name: Background Detail
+    uniqueID: 3745693263
     locked: 0
   - name: Player
     uniqueID: 1448439795

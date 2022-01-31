@@ -3,8 +3,8 @@ using UnityEngine;
 public class PlantMono : MonoBehaviour
 {
     public PlantData Data;
-    SpriteRenderer spriteRenderer;
 
+    SpriteRenderer spriteRenderer;
     int Age = 0;
 
     void Start()
