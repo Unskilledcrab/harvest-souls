@@ -3,17 +3,24 @@ using UnityEngine;
 
 public class ItemMono : MonoBehaviour, IDraggable, IContainable
 {
-    public ItemData Data;
+    [SerializeField] 
+    ItemData Data;
+
     SpriteRenderer spriteRenderer;
+
+    private void OnValidate()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer.sprite != Data.Sprite)        
+            spriteRenderer.sprite = Data.Sprite;        
+
+        name = Data.Name;
+    }
 
     public Action OnRemoveItemFromContainer { get; set; }
     public Action OnAddingItem { get; set; }
-    public float WeightKg { get => Data.WeightKg; set => Data.WeightKg = value; }
-
-    public void ContainerMoved(Vector3 delta)
-    {
-        transform.position += delta;
-    }
+    public float WeightKg => Data.WeightKg;
+    public string Name => Data.Name;
 
     public ItemData GetData() => Data;
 
@@ -34,11 +41,14 @@ public class ItemMono : MonoBehaviour, IDraggable, IContainable
         spriteRenderer.sortingOrder = order;
     }
 
-    void Start()
+    public void SetParentTransform(Transform parent)
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = Data.Sprite;
+        transform.parent = parent;
     }
 
+    public void ClearParentTransform()
+    {
+        transform.parent = null;
+    }
 }
 

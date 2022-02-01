@@ -4,40 +4,29 @@ using UnityEngine;
 
 public class ContainerMono : MonoBehaviour, IContainer, IDraggable
 {
-    public Action<Vector3> OnContainerMoved { get; set; }
-    public ContainerData Data;
-    public ContainerSet Container;
+    [SerializeField] ContainerData Data;
+    [SerializeField] ContainerSet Container;
 
     SpriteRenderer spriteRenderer;
 
-    Vector3 _lastPosition;
-
+    void OnValidate()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer.sprite != Data.Sprite)
+            spriteRenderer.sprite = Data.Sprite;
+    }
 
     void Start()
     {
         Container.Items.Clear();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = Data.Sprite;
-        _lastPosition = transform.position;
-    }
-
-    void Update()
-    {
-        if (transform.hasChanged)
-        {
-            var delta = transform.position - _lastPosition;
-            OnContainerMoved?.Invoke(delta);
-            _lastPosition = transform.position;
-            transform.hasChanged = false;
-        }
     }
 
     public bool TryAdd(IContainable item)
     {
         if (Container.Items.Sum(x => x.WeightKg) > Data.CapacityKg)
             return false;
-
         Container.Add(item);
+        item.SetParentTransform(transform);
         item.SetSpriteRendererOrder(spriteRenderer.sortingOrder + 1);
         return true;
     }
@@ -45,8 +34,8 @@ public class ContainerMono : MonoBehaviour, IContainer, IDraggable
     {
         if (!Container.Items.Contains(item))
             return false;
-
         Container.Remove(item);
+        item.ClearParentTransform();
         item.SetSpriteRendererOrder(0);
         return true;
     }

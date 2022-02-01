@@ -101,15 +101,8 @@ public class DragAndDropManager : MonoBehaviour
                 if (container.TryAdd(containable))
                 {
                     containable.OnRemoveItemFromContainer?.Invoke();
-                    container.OnContainerMoved += containable.ContainerMoved;
-
-                    containable.OnRemoveItemFromContainer = () =>
-                    {
-                        container.OnContainerMoved -= containable.ContainerMoved;
-                        container.TryRemove(containable);
-                    };
-                }
-                
+                    containable.OnRemoveItemFromContainer = () => container.TryRemove(containable);                    
+                }                
             }
             else
             {

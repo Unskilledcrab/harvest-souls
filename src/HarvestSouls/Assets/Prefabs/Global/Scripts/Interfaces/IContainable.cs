@@ -3,10 +3,12 @@ using UnityEngine;
 
 public interface IContainable
 {
-    public float WeightKg { get; set; }
+    public string Name { get; }
+    public float WeightKg { get; }
     ItemData GetData();
     Action OnRemoveItemFromContainer { get; set; }
     Action OnAddingItem { get; set; }
-    void ContainerMoved(Vector3 vector);
     void SetSpriteRendererOrder(int order);
+    void SetParentTransform(Transform parent);
+    void ClearParentTransform();
 }
