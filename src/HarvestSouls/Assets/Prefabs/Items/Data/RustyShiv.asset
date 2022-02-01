@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a72f47b49439548976a7fb15adbe09, type: 3}
   m_Name: RustyShiv
   m_EditorClassIdentifier: 
+  Name: Rusty Shiv
   Sprite: {fileID: 21300000, guid: 5408f3a6aded5ca49a17e6c4dbf1f798, type: 3}
   WeightKg: 2.2

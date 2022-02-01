@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a72f47b49439548976a7fb15adbe09, type: 3}
   m_Name: Corn
   m_EditorClassIdentifier: 
+  Name: Corn
   Sprite: {fileID: 5064783790253195744, guid: 48d6b47cc0046f34785be01e0d592423, type: 3}
   WeightKg: 0
