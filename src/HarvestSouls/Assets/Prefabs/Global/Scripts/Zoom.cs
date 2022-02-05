@@ -19,6 +19,7 @@ public class Zoom : MonoBehaviour
         camera = GetComponent<CinemachineVirtualCamera>();
         input = new InputMaster();
         input.Player.Enable();
+        ResetZoom();
     }
 
     // Update is called once per frame
