@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3661104070661873155, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 6816234221959248436, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
+      propertyPath: item.Id
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7763753142887912517, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -176,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8471736209058766573, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_Name
-      value: Corn
+      value: Red Potion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
@@ -372,6 +380,26 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7142679603167954992, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.64
+      objectReference: {fileID: 0}
+    - target: {fileID: -7142679603167954992, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661104070661873155, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1a2de221137444e43b6795ee3abb7be7, type: 3}
+    - target: {fileID: 6816234221959248436, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 219ca7fb2d906d447a809a85371b8979, type: 2}
+    - target: {fileID: 6816234221959248436, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
+      propertyPath: item.Id
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7763753142887912517, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -474,7 +502,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryPrefab: {fileID: 4291889411786206456, guid: 2520210bb916b14458ef7694ec8768ac, type: 3}
+  groundItemPrefab: {fileID: 8471736209058766573, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
   inventory: {fileID: 11400000, guid: 48e59813d1458734eb6f57d9e81eba90, type: 2}
+  player: {fileID: 428235170}
+  playerData: {fileID: 11400000, guid: 3e90e12821ce0a745b7bd8b05bcd7c26, type: 2}
   containerSpace: {fileID: 347769883}
   stepSize: 30
 --- !u!114 &720291348
@@ -622,6 +653,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6114511540138888416, guid: d9fd69ecd5a38414eb7f83bc1d06f3c3, type: 3}
+      propertyPath: PlayerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 3e90e12821ce0a745b7bd8b05bcd7c26, type: 2}
     - target: {fileID: 6114511540138888416, guid: d9fd69ecd5a38414eb7f83bc1d06f3c3, type: 3}
       propertyPath: mouseClick.m_SingletonActionBindings.Array.size
       value: 1
@@ -832,16 +867,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7142679603167954992, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.2
+      value: 1.64
       objectReference: {fileID: 0}
     - target: {fileID: -7142679603167954992, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.2
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 3661104070661873155, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 21300000, guid: 21c23e12f8423cc46863776979c9fb71, type: 3}
     - target: {fileID: 3661104070661873155, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_Color.b
       value: 0.2028302
@@ -858,6 +893,10 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: 1cba96259a54c514c91ab9986109a51a, type: 2}
+    - target: {fileID: 6816234221959248436, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
+      propertyPath: item.Id
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7763753142887912517, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -904,7 +943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8471736209058766573, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_Name
-      value: Red Potion
+      value: Arrows
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
@@ -917,16 +956,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7142679603167954992, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.2
+      value: 1.64
       objectReference: {fileID: 0}
     - target: {fileID: -7142679603167954992, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.2
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 3661104070661873155, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 21300000, guid: 21c23e12f8423cc46863776979c9fb71, type: 3}
     - target: {fileID: 3661104070661873155, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_Color.b
       value: 0.2028302
@@ -943,6 +982,10 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: 1cba96259a54c514c91ab9986109a51a, type: 2}
+    - target: {fileID: 6816234221959248436, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
+      propertyPath: item.Id
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7763753142887912517, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -989,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8471736209058766573, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_Name
-      value: Red Potion
+      value: Arrows
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
@@ -1011,11 +1054,15 @@ PrefabInstance:
     - target: {fileID: 3661104070661873155, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 21c23e12f8423cc46863776979c9fb71, type: 3}
+      objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 6816234221959248436, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: 4a183f0aa2dcb5145a47159df8c48e9c, type: 2}
+    - target: {fileID: 6816234221959248436, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
+      propertyPath: item.Id
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7763753142887912517, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1062,7 +1109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8471736209058766573, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_Name
-      value: Arrows
+      value: Red Potion
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
@@ -1084,11 +1131,15 @@ PrefabInstance:
     - target: {fileID: 3661104070661873155, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 21c23e12f8423cc46863776979c9fb71, type: 3}
+      objectReference: {fileID: 21300000, guid: 1a2de221137444e43b6795ee3abb7be7, type: 3}
     - target: {fileID: 6816234221959248436, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: 4a183f0aa2dcb5145a47159df8c48e9c, type: 2}
+    - target: {fileID: 6816234221959248436, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
+      propertyPath: item.Id
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7763753142887912517, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1135,7 +1186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8471736209058766573, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}
       propertyPath: m_Name
-      value: Arrows
+      value: Corn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6501f2fa7f571084e85653fbaf9aa731, type: 3}

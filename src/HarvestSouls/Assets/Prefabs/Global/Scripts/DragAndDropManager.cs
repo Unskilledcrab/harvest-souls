@@ -7,8 +7,7 @@ using UnityEngine.InputSystem;
 
 public class DragAndDropManager : MonoBehaviour
 {
-    [SerializeField]
-    float reach;
+    public PlayerObject PlayerData;
 
     [SerializeField]
     private InputAction mouseClick;
@@ -55,7 +54,7 @@ public class DragAndDropManager : MonoBehaviour
         {
             var distanceFromPlayer = Vector2.Distance(hit.point, player.transform.position);
 
-            if (distanceFromPlayer <= reach)
+            if (distanceFromPlayer <= PlayerData.Reach)
                 StartCoroutine(DragUpdate(hit.collider.gameObject));
         } 
     }
@@ -95,7 +94,7 @@ public class DragAndDropManager : MonoBehaviour
 
         var distanceFromPlayer = Vector2.Distance(clickedObject.transform.position, player.transform.position);
 
-        if (distanceFromPlayer > reach)
+        if (distanceFromPlayer > PlayerData.Reach)
         {
             clickedObject.transform.position = originalPosition;
         }

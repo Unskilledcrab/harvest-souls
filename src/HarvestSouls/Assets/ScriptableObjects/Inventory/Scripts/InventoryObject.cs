@@ -67,6 +67,7 @@ public class InventoryItem
     public int id;
     public Item item;
     public int amount;
+    public (float, float, float)? position;
 
     public InventoryItem(int _id, Item _item, int _amount)
     {

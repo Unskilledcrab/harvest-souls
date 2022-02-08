@@ -2,13 +2,17 @@ using UnityEngine;
 
 public class GroundItem : MonoBehaviour, IDraggable
 {
-    public ItemObject item;
+    public ItemDatabaseObject database;
+    public Item item;
 
     private void OnValidate()
     {
-        GetComponent<SpriteRenderer>().sprite = item.Icon;
-        name = item.name;
+        var dbItem = database.GetItem[item.Id];
+        GetComponent<SpriteRenderer>().sprite = dbItem.Icon;
+        name = dbItem.name;
     }
+
+    public void Validate() => OnValidate();
 
     private void Awake()
     {

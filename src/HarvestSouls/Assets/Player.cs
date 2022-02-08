@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
         Debug.Log("Player.OnMouseDrop");
         if (other.gameObject.TryGetComponent<GroundItem>(out var item))
         {
-            inventory.AddItem(new Item(item.item));
+            inventory.AddItem(item.item);
             Destroy(other.gameObject);
         }
         else
