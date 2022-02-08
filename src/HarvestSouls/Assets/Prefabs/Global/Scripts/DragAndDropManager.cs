@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 
 public class DragAndDropManager : MonoBehaviour
 {
+    public PlayerObject PlayerData;
+
     [SerializeField]
     private InputAction mouseClick;
 
@@ -16,14 +18,14 @@ public class DragAndDropManager : MonoBehaviour
     [SerializeField]
     private float mouseDragSpeed = .1f;
 
-    
-
+    Player player;
     private Camera mainCamera;
     private Vector3 velocity = Vector3.zero;
     private WaitForFixedUpdate waitForFixedUpdate = new WaitForFixedUpdate();
 
     private void Awake()
     {
+        player = GetComponent<Player>();
         mainCamera = Camera.main;
     }
 
@@ -48,12 +50,18 @@ public class DragAndDropManager : MonoBehaviour
                 x.collider.gameObject.TryGetComponent<IDraggable>(out var draggable) && 
                 draggable.InDragAnchor(x.point - (Vector2)x.collider.transform.position));
         
-        if (hit.collider?.gameObject.GetComponent<IDraggable>() != null)        
-            StartCoroutine(DragUpdate(hit.collider.gameObject));        
+        if (hit.collider?.gameObject.GetComponent<IDraggable>() != null)
+        {
+            var distanceFromPlayer = Vector2.Distance(hit.point, player.transform.position);
+
+            if (distanceFromPlayer <= PlayerData.Reach)
+                StartCoroutine(DragUpdate(hit.collider.gameObject));
+        } 
     }
 
     private IEnumerator DragUpdate(GameObject clickedObject)
     {
+        var originalPosition = clickedObject.transform.position;
         clickedObject.TryGetComponent<Rigidbody>(out var rb);
         clickedObject.TryGetComponent<IDraggable>(out var iDraggable);
         iDraggable?.onStartDrag();
@@ -84,30 +92,22 @@ public class DragAndDropManager : MonoBehaviour
         }
         iDraggable?.onEndDrag();
 
-        ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+        var distanceFromPlayer = Vector2.Distance(clickedObject.transform.position, player.transform.position);
 
-        RaycastHit2D hitContainer = Physics2D.GetRayIntersectionAll(ray)
-            .FirstOrDefault(x => 
-                x.collider?.GetComponent<IContainer>() != null && 
-                x.collider?.gameObject != clickedObject);
-
-        var container = hitContainer.collider?.gameObject.GetComponent<IContainer>();
-
-
-        if (clickedObject.TryGetComponent<IContainable>(out var containable))
+        if (distanceFromPlayer > PlayerData.Reach)
         {
-            if (container != null)
+            clickedObject.transform.position = originalPosition;
+        }
+        else
+        {
+            ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+
+            RaycastHit2D hitContainer = Physics2D.GetRayIntersectionAll(ray)
+                .SingleOrDefault(x => x.collider?.GetComponent<Player>() != null);
+
+            if(hitContainer.collider != null)
             {
-                if (container.TryAdd(containable))
-                {
-                    containable.OnRemoveItemFromContainer?.Invoke();
-                    containable.OnRemoveItemFromContainer = () => container.TryRemove(containable);                    
-                }                
-            }
-            else
-            {
-                containable.OnRemoveItemFromContainer?.Invoke();
-                containable.OnRemoveItemFromContainer = null;
+                player.OnMouseDrop(clickedObject);
             }
         }
     }

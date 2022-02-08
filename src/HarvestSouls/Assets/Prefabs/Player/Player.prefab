@@ -167,6 +167,8 @@ GameObject:
   - component: {fileID: 579911979501762689}
   - component: {fileID: 579911979501762690}
   - component: {fileID: 579911979501762702}
+  - component: {fileID: 6114511540138888416}
+  - component: {fileID: -8019385747037037082}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -277,6 +279,7 @@ MonoBehaviour:
   SprintSpeed: 10
   RigidBody: {fileID: 579911979501762689}
   Animator: {fileID: 579911979501762702}
+  SortPoint: {fileID: 0}
 --- !u!95 &579911979501762702
 Animator:
   serializedVersion: 3
@@ -296,3 +299,40 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6114511540138888416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579911979501762691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653e171330a74984eaf583a6032490fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reach: 3
+  mouseClick:
+    m_Name: Mouse Click
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 04136eb0-54be-46e6-a5bd-d7f4165eb507
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  mouseDragPhysicsSpeed: 10
+  mouseDragSpeed: 0.1
+--- !u!114 &-8019385747037037082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579911979501762691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd1c41a44b7b10347a19d22f11ef8518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: 48e59813d1458734eb6f57d9e81eba90, type: 2}

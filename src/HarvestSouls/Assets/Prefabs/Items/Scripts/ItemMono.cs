@@ -33,6 +33,7 @@ public class ItemMono : MonoBehaviour, IDraggable, IContainable
 
     public void onStartDrag()
     {
+        Debug.Log("Dragging");
         spriteRenderer.sortingOrder = 1;
     }
 
